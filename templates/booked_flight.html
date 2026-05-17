@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Booked Flights</title>
+</head>
+
+<body>
+
+<h2>Booked Flights</h2>
+
+<table border="1">
+
+<tr>
+<th>Flight Number</th>
+<th>Departure</th>
+<th>Arrival</th>
+<th>Time</th>
+</tr>
+
+{% for flight in flights %}
+
+<tr>
+<td>{{ flight.flight_number }}</td>
+<td>{{ flight.departure_city }}</td>
+<td>{{ flight.arrival_city }}</td>
+<td>{{ flight.departure_time }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="{{ url_for('dashboard') }}">
+<button>Go to Dashboard</button>
+</a>
+
+</body>
+</html>

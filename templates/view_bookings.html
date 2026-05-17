@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View Bookings</title>
+</head>
+<body>
+
+<h1>Your Bookings</h1>
+
+<ul>
+{% for booking in booked_flights %}
+<li>{{ booking.flight.flight_number }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>

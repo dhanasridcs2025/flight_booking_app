@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+
+    <h2>Flight Booking - Registration</h2>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <p>
+            <label>Username</label><br>
+            {{ form.username(size=32) }}
+        </p>
+
+        <p>
+            <label>Password</label><br>
+            {{ form.password(size=32) }}
+        </p>
+
+        <p>
+            {{ form.submit() }}
+        </p>
+
+    </form>
+
+    <p>Already have an account?</p>
+    <a href="{{ url_for('login') }}">Login here</a>
+
+</body>
+</html>
